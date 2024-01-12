@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale-1">
+
+	<title>What the heart wants</title>
+	<link rel="icon" type="images/x-icon" href="images\eLogo.png"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+	
+	:root{
+		    background: #ffc9de ;
+		}
+
+
+
+		*{
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		    font-family: Verdana, Geneva, Tahoma, sans-serif;
+		    outline: none;
+		    border: none;
+		    text-decoration: none;
+		    text-transform: capitalize;
+		    transition: .2s linear;
+
+
+		}
+
+		html{
+
+		    font-size: 62.5%;
+		    scroll-behavior: smooth;
+		    scroll-padding-top: 6rem;
+		    overflow-x: hidden;
+
+		}
+
+		header{
+		  
+		    top: 0; left: 0; right: 0;
+		    background: rgba(255, 255, 255, 1.0);
+		    padding: 2rem 9%;
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    z-index: 1000;
+		    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+		}
+
+		header .logo{
+		    font-size: 3rem;
+		    color: #333;
+		    font-weight: bolder;
+		    padding-right: 3rem;
+
+		}
+
+		header .logo span{
+		    color: #e84393;
+		}
+
+
+		header .icons a{
+		    font-size: 3rem;
+		    color: #333;
+		    margin-left: 2rem;
+
+		}
+
+		header .icons a:hover{
+		    color: #e84393;
+		}
+
+
+		header #toggler{
+		    display: none;
+		}
+
+		h1 {
+		    font-size: 30px;
+		}
+
+		
+
+    
+	    
+
+
+	    .sidebar {
+	      height: 100%;
+	      width: 0;
+	      position: fixed;
+	      z-index: 1;
+	      top: 0;
+	      left: 0;
+	      background-color: #fff;
+	      overflow-x: hidden;
+	      transition: 0.5s;
+	      padding-top: 60px;
+	      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+	      z-index: 1000;
+	    }
+
+	    .sidebar h2 {
+	    	position: relative;
+	    	font-size: 30px;
+	    	padding: 1.5rem;
+
+	    }
+	    .sidebar a {
+	      padding: 8px 8px 8px 32px;
+	      text-decoration: none;
+	      font-size: 20px;
+	      color: #333;
+	      display: block;
+	      transition: 0.3s;
+	    }
+
+	    .sidebar a:hover {
+	      color: #e84393;
+	    }
+
+	    .sidebar .closebtn {
+	      position: absolute;
+	      top: 0;
+	      right: 25px;
+	      font-size: 30px;
+	      margin-left: 50px;
+	    }
+
+	    .sidenav {
+	    	background-color:  #ffc9de;
+	    	border: .5rem solid rgba(0, 0, 0, .1);
+
+	    }
+
+
+	    button {
+	    	font-size: 20px;
+	    	color: #333;
+	    	background-color: transparent;
+	    	padding: 1.5rem;
+	    }
+	    
+	    button:hover {
+	    	color: #e84393;
+	    	background-color: #999;
+	    }
+
+	    section {
+	    	padding: 80px;
+	    }
+
+	    h2 {
+	    	font-size: 30px;
+	    }
+
+</style>
+
+
+<script>
+	
+		function openNav() {
+	      document.getElementById("mySidebar").style.width = "250px";
+	    }
+
+	    function closeNav() {
+	      document.getElementById("mySidebar").style.width = "0";
+	    }
+
+	    function back() {
+	    	window.history.back();
+	    }
+</script>
+
+</head>
+<body>
+		<header>
+			
+			<div id="navbar">
+		        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+		    </div>
+
+		    <div id="mySidebar" class="sidebar">
+		      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
+		        <div class="sidenav">
+		          <h2>All I Want</h2>
+		    	</div>  
+
+		        <br>
+		        <button onclick="back()">Back</button>
+		        <a href="browse.html#Preview1">Preview</a>
+
+
+		     
+		      
+
+		     </div>
+
+		        <h2>All I Want</h2>
+
+		        <div class="icons">
+		            <a href="index.html" class="fas fa-home"></a>
+		            <a href="library.html#currentreads" class="fas fa-book"></a>
+		            <a href="library.html#fav" class="fas fa-heart" onclick="openPage('fav', this, 'white')" class="fas fa-heart"></a>
+		            <a href="contact.html" class="fas fa-user"></a> 
+
+    </header>
+
+    	<section class="view">
+ 			<h2>Coming Soon....</h2>
+ 		</section>
+</body>
+</html>

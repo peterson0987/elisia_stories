@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+	<meta name="keywords" content="elisia stories, stories, slice of life book, adventure books, novels read online">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+	<title>Elisia - Share Stories for Fun</title>
+	<link rel="icon" type="images/x-icon" href="images\eLogo.png"/>
+
+
+	<style>
+		
+		:root{
+				background: #ffc9de ;
+		}
+
+
+
+		*{
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		    font-family: Verdana, Geneva, Tahoma, sans-serif;
+		    outline: none;
+		    border: none;
+		    text-decoration: none;
+		    text-transform: capitalize;
+		    transition: .2s linear;
+
+		}
+
+		html{
+
+		    font-size: 62.5%;
+		    scroll-behavior: smooth;
+		    scroll-padding-top: 6rem;
+		    overflow-x: hidden;
+
+		}
+
+		header{
+		    position: fixed;
+		    top: 0; left: 0; right: 0;
+		    background: rgba(255, 255, 255 ,0.3);
+		    padding: 2rem 9%;
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    z-index: 1000;
+		    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+		}
+
+
+		header img {
+
+			width: 4.5%;
+			height: 2.5%;
+		}
+
+		header .logo{
+		    font-size: 3rem;
+		    color: rgba(0, 0, 0, 3.0);
+		    font-weight: bolder;
+
+		}
+
+
+		header .navbar a{ 
+		    font-size: 2rem;
+		    padding: 1.5rem;
+		    color: rgba(0, 0, 0, 2.0);
+		}
+
+		header .navbar a:hover{
+		    color: #e84393;
+		}
+
+		header .icons a{
+		    font-size: 3rem;
+		    color: rgba(0, 0, 0, 2.0);
+		    margin-left: 2rem;
+
+		}
+
+		header .icons a:hover{
+		    color: #e84393;
+		}
+
+
+		header #toggler{
+		    display: none;
+		}
+
+		header .fa-bars{
+		    font-size: 3rem;
+		    color: rgba(0, 0, 0, 2.0);
+		    border-radius: 7rem;
+		    padding: 3rem 1 rem;
+		    cursor: pointer;
+		    border: none;
+		    display: none;
+		}
+
+
+		#toggler {
+			display: none;
+		}
+
+
+	nav {
+      background-color: transparent;
+      overflow: hidden;
+    }
+
+    nav a {
+      font-size: 2rem;
+	  padding: 0 1.5rem;
+	  color: rgba(0, 0, 0, 2.0);
+      float: left;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: transparent;
+      color: black;
+    }
+
+
+
+		section {
+			padding: 20px;
+		}
+
+		.homeSlide {
+	      position: fixed;
+	      top: 0;
+	      right: 0;
+	      bottom: 0;
+	      left: 0;
+	      overflow: hidden;
+	      z-index: -1;
+	    }
+
+	    .slides {
+	      display: flex;
+	      transition: transform 0.5s ease-in-out;
+	    }
+
+	    .slide {
+	      min-width: 100%;
+	      box-sizing: border-box;
+	      position: relative;
+	    }
+
+	    img {
+
+	      width: 100%;
+	      height: 100%;
+	      object-fit: cover;
+	    }
+
+	    .prev, .next {
+	      position: absolute;
+	      top: 50%;
+	      width: auto;
+	      padding: 16px;
+	      margin-top: -22px;
+	      color: white;
+	      font-weight: bold;
+	      font-size: 20px;
+	      cursor: pointer;
+	      user-select: none;
+	      display: 	none;
+	    }
+
+	    .next {
+	      right: 0;
+	    }
+
+	    .slideContent {
+		    position: absolute;
+		    top: 40%;
+		    left: 20%;
+		    transform: translate(-50%, -50%);
+		    color: white;
+		    font-size: 24px;
+		    text-align: center;
+		   }
+
+	    .slideContent:after {
+  		  content: "";
+  		  display: table;
+  		  clear: both;
+
+	     
+	    }
+
+	    .slideContent2 {
+		    position: absolute;
+		    top: 40%;
+		  	right: 20%;
+		    transform: translate(-50%, -50%);
+		    color: white;
+		    font-size: 24px;
+		    text-align: center;
+		   }
+
+	    .slideContent2:after {
+  		  content: "";
+  		  display: table;
+  		  clear: both;
+
+  		 }
+
+	    .column {
+	      
+	      position: absolute;
+	      float: left;
+	      top: 50%;
+	      left: 20%;
+	      transform: translate(-50%, -50%);
+	      color: white;
+	      text-align: center;
+	      z-index: 1;
+
+	    }
+
+	    h2 {
+	    	font-family: serif;
+	    	font-size: 	50px;
+	    	color: #000;
+				text-align: left;
+	    }
+
+	    button{
+	    	font-size: 20px;
+	    	padding: 1rem;
+	    	border-radius: 5rem;
+	    	margin: 1.5rem;	
+	    	text-align: right;    
+	    }
+
+	    button:hover {
+	    	color: #e84393;
+	    }
+
+
+
+
+
+
+		@media (max-width: 991px)
+		{
+		    html{
+
+		    font-size: 55%;
+		    }
+
+		    header{
+		        padding: 1.5rem;
+
+		    }
+		}
+
+		@media (max-width: 768px){
+		    header .fa-bars{
+		        display: block;
+		    }
+
+
+		    header .navbar{
+		        position: absolute;
+		        top: 100%;
+		        left: 0;
+		        right: 0;
+		        background: #fff;
+		        border-top: .1rem solid rgba(0, 0, 0, .1);
+		        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		    }
+
+
+		    header #toggler:checked ~ .navbar{
+		        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+		    }
+
+		    
+	   		header .navbar a{
+		        margin: 1.5rem;
+		        padding: 1.5rem;
+		        width: 100%;
+		        background: transparent;
+		        border: 1rem solid rgba(0, 0, 0, .1);
+		       
+
+	     	}
+
+	     	nav .navbar {
+	     		display: block;
+	     	}
+
+	     	h2 {
+	     		font-size: 20px;
+	     	}
+
+	     	button {
+	     		border-radius: 1rem;
+	     		padding: 1rem;
+	     		position: absolute;
+	     		font-size: 10px;
+	     		text-align: center;
+	     	}
+
+	     	
+		}
+
+
+	</style>
+
+
+
+	<script>
+	
+
+		let slideIndex = 1;
+
+	    function showSlides(n) {
+	      const slides = document.querySelector('.slides');
+	      const totalSlides = document.querySelectorAll('.slide').length;
+
+	      if (n > totalSlides) {
+	        slideIndex = 1;
+	      }
+
+	      if (n < 1) {
+	        slideIndex = totalSlides;
+	      }
+
+	      slides.style.transform = `translateX(${-100 * (slideIndex - 1)}%)`;
+	    }
+
+	    function plusSlides(n) {
+	      showSlides(slideIndex += n);
+	    }
+
+	    // Automatic slideshow
+	    setInterval(() => {
+	      plusSlides(1);
+	    }, 3000);  // Change slide every 3 seconds
+
+	    function toBrowse() {
+	    	window.location.href = 'browse.html';
+	    }
+
+	    function redirectToLibrary () {
+	    	window.location.href = 'library.html';
+	    }
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<header>
+		
+		<input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+		
+		<img src="images\eLogo.png">
+		<a href="#" class="logo">elisia</a>
+
+
+		<nav class="navbar">
+			<a href="#index.html">Home</a>
+
+			<a href="browse.html">Browse</a>
+			<a href="library.html">Library</a>
+			<a href="about.html">About Us</a>
+			<a href="contact.html">Contact</a>
+
+
+
+		</nav>
+
+		<div class="icons">
+           
+            <a href="library.html#fav" class="fas fa-heart" onclick="openPage('fav', this, 'white')" class="fas fa-heart"></a>
+            <a href="contact.html#aboutsec" class="fas fa-user"></a> 
+
+
+        </div>
+
+	</header>
+
+
+
+	<section class="homeSec">	
+
+			<div class="homeSlide">	
+				<div class="slides">
+					<div class="slide"><img src="images\book1.jpg" alt="homeSlide1">
+						<div class="slideContent">
+							<div class="column">
+							<h2>live a thousand lives in a <span>moment</span> </h2>
+
+							<button onclick="redirectToLibrary()">Read <span>now &#8594;</span></button>
+						</div>	
+						</div>
+					</div>
+					<div class="slide"><img src="images\book3.webp" alt="homeSlide1">
+
+					<div class="slideContent">
+							<div class="column">
+							<h2>spend years in a <span>minute</span> </h2>
+
+							<button onclick="redirectToLibrary()">Read <span>now &#8594;</spa></button>
+						</div>	
+						</div>
+					</div>
+
+					<div class="slide"><img src="images\vinbook.jpg" alt="homeSlide1">
+
+						<div class="slideContent2">
+							<div class="column">
+							<h2>add new memory for <span>lifetime</span> </h2>
+
+							<button onclick="redirectToLibrary()">Read <span>now &#8594;</spa></button>
+						</div>	
+						</div>
+					</div>
+				</div>
+				 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+
+
+
+	</section>
+
+</body>
+</html>
